@@ -6,11 +6,11 @@ export default function IndexRouter() {
   const element = useRoutes([
     {
       path: '/',
-      element: <Navigate to='/find' />
+      element: <Navigate to='/home' />
     },
     {
-      path: '/find',
-      element: lazyLoad('Find')
+      path: '/home',
+      element: lazyLoad('home/Home')
     }
   ])
 
