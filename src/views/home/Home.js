@@ -3,6 +3,8 @@ import React from 'react'
 
 import Navbar from '../../components/common/navbar/Navbar'
 import '../../assets/icons/iconfont.css'
+import Tabbar from '../../components/common/tabbar/Tabbar'
+import Playing from '../../components/common/playing/Playing'
 
 export default function Home() {
   return (
@@ -28,6 +30,9 @@ export default function Home() {
           <span className='iconfont icon-scan' style={{width: '1rem'}}></span>
         </div>
       </Navbar>
+      
+      <Playing />
+      <Tabbar />
     </div>
   )
 }

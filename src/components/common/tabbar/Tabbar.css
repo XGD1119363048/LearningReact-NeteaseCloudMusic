@@ -1,0 +1,27 @@
+.home-tabbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.adm-badge-wrapper {
+  width: 1.5rem;
+  border-radius: 1.5rem;
+}
+
+.adm-tab-bar-item-active .adm-badge-wrapper {
+  background-color: red;
+  color: white;
+}
+
+.adm-tab-bar-item-active .adm-tab-bar-item-title {
+  color: red;
+}
+
+.icon-tabbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
