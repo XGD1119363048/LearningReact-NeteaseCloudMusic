@@ -1,10 +1,13 @@
 import React from 'react'
-// import {} from ''
+import { Outlet } from 'react-router-dom'
 
 import Navbar from '../../components/common/navbar/Navbar'
 import '../../assets/icons/iconfont.css'
 import Tabbar from '../../components/common/tabbar/Tabbar'
 import Playing from '../../components/common/playing/Playing'
+
+// css
+import style from './Home.module.css'
 
 export default function Home() {
   return (
@@ -12,7 +15,9 @@ export default function Home() {
       <Navbar right={<div style={{
         width: '3rem',
         display: 'flex',
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
+        position: 'sticky',
+        top: 0
       }}>
         <span className='iconfont icon-skin' />
         <span className='iconfont icon-microphone' />
@@ -31,6 +36,10 @@ export default function Home() {
         </div>
       </Navbar>
       
+      <div className={style['home-content']}>
+        <Outlet />
+      </div>
+
       <Playing />
       <Tabbar />
     </div>

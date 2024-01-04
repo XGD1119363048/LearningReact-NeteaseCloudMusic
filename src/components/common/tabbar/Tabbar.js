@@ -1,32 +1,34 @@
 import React from 'react'
 import { TabBar } from 'antd-mobile'
+import { useNavigate } from 'react-router-dom'
 
 // css
 import './Tabbar.css'
 
+
 const tabs = [
   {
-    key: 'recommend',
+    key: '/home/recomment',
     title: '推荐',
     icon: <span className='iconfont icon-music icon-tabbar'/>
   },
   {
-    key: 'find',
+    key: '/home/find',
     title: '发现',
     icon: <span className='iconfont icon-compass icon-tabbar'/>
   },
   {
-    key: 'roam',
+    key: '/home/roam',
     title: '漫游',
     icon: <span className='iconfont icon-radio icon-tabbar'/>
   },
   {
-    key: 'space',
+    key: '/home/space',
     title: '动态',
     icon: <span className='iconfont icon-Chat icon-tabbar'/>
   },
   {
-    key: 'center',
+    key: '/home/center',
     title: '我的',
     icon: <span className='iconfont icon-user icon-tabbar'/>
   },
@@ -34,9 +36,10 @@ const tabs = [
 
 
 export default function Tabbar() {
+  const navigate = useNavigate()
   return (
     <div className='home-tabbar'>
-      <TabBar>
+      <TabBar onChange={(key) => navigate(key)}>
         {tabs.map(item => (
           <TabBar.Item
             key={item.key}
